@@ -1,0 +1,1107 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'brittany';
+    src: local('brittany'), url(./fonts/brittany_signature/BrittanySignature.ttf) format('truetype');
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.c-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar-bg {
+    background-color: #0f476786;
+    /* background: rgba(255, 255, 255, 0.2); */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+}
+
+.navbar img {
+    width: 90px;
+    height: 85px;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.relative {
+    position: relative;
+}
+
+.relative .overlay {
+    position: absolute;
+    background: #002A42;
+    height: 90vh;
+    width: 100%;
+    opacity: .7;
+}
+
+.relative .heroBgImage {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    z-index: -10;
+    display: grid;
+    align-items: center;
+    /* object-fit: cover; */
+}
+
+.hideDesktop{
+    display: none;
+}
+
+.relative .hero-content {
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    position: sticky;
+    z-index: 10;
+}
+
+.relative .hero-content .content-display {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.relative .hero-content .content-display h1 {
+    font-family: brittany;
+    font-size: 90px;
+    color: #3AAED9;
+}
+
+.relative .hero-content .content-display p {
+    font-size: 35px;
+    color: #fff;
+    font: 600;
+    margin-top: 30px;
+}
+
+.relative .hero-content .content-display button {
+    background: #fff;
+    color: #0F4767;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+
+/* HOME ABOUT */
+
+.bg-white {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 65px rgba(0, 0, 0, 0.25);
+    padding: 80px 0;
+    margin-bottom: 50px;
+}
+
+.home-about {
+    border-left: 12px solid #0F4767;
+    display: flex;
+    align-items: center;
+    background: #D9D9D9;
+}
+
+.home-about .about-content {
+    padding: 0 30px;
+}
+
+.home-about .about-content h1 {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.home-about .about-content p {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.home-about .about-content span {
+    font-weight: bold;
+}
+
+.home-about .about-image {
+    background: #ffff;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+}
+
+/* HOME VIDEO */
+.home-video {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 100px auto;
+}
+
+.home-video .home-video-player {
+    background: #fff;
+    padding: 10px;
+    /* background: linear-gradient(0deg, #0C4363, #0C4363), url(_MG_8154-www.blckmedia.co.zw.jpg); */
+    background-blend-mode: multiply, normal;
+    border: 10px solid #FFFFFF;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 18px;
+}
+
+.home-video .home-video-player video {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.home-video .home-video-content {
+    padding-left: 30px;
+}
+
+.home-video .home-video-content h1 {
+    font-size: 48px;
+}
+
+.home-video .home-video-content div {
+    border: 2px solid #0F4767;
+    width: 45%;
+    margin: 5px 0;
+    margin-bottom: 15px;
+}
+
+
+/* ENRICH YOUR SOUL SECTION */
+
+.home-enrich-soul {
+    position: relative;
+}
+
+.home-enrich-soul img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    display: grid;
+    align-items: center;
+    /* object-fit: cover; */
+}
+
+.home-enrich-soul-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 50px 0;
+}
+
+.home-enrich-soul .special_calling {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home-enrich-soul-content .display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.home-enrich-soul-content .display h1 {
+    font-weight: 100;
+    font-size: 80px;
+    color: #fff;
+}
+
+.home-enrich-soul-content .display p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.home-enrich-soul-content .display button {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+/* LIBRARY SECTION */
+
+.library {
+    width: 90%;
+    margin: 100px auto;
+}
+
+.library h1 {
+    text-align: center;
+    color: #0F4767;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.library .library-content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+}
+
+.library .library-content .book {
+    background: linear-gradient(136.23deg, #0A3148 58.74%, #124968 100%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    flex-basis: 25%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 20px;
+}
+
+.library .library-image {
+    width: 100%;
+    height: 200px;
+}
+
+.library .library-content h4 {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 0;
+    margin: 0 20px;
+}
+
+/* PRAYER REQUEST FORM */
+
+.home-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home-form .header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.home-form .header h1 {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+
+.home-form form {
+    background: linear-gradient(97.92deg, #0C4363 -13.38%, #155F89 97.25%);
+    border-radius: 32px;
+    padding: 30px;
+}
+
+.home-form form .form-input {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.home-form form .form-input label {
+    color: #fff;
+    font-weight: 500;
+    margin: 5px 0
+}
+
+.home-form form .form-input input {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    border: none;
+    padding: 10px 10px;
+}
+
+.home-form form button {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 10px 40px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+
+/* ENRICH YOUR SOUL SECTION */
+
+.footer {
+    position: relative;
+    background-image: url(./images/Rectangle\ 30.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.footer img {
+    width: 100%;
+    /* height:  65vh; */
+    position: absolute;
+    z-index: -10;
+    display: grid;
+    align-items: center;
+    /* object-fit: cover; */
+}
+
+.footer-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 30px 0;
+}
+
+.footer-content .display {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content .display h3 {
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+    text-align: left;
+}
+
+.footer-content .display p {
+    color: #fff;
+    text-align: left;
+}
+
+.footer-content .footer-row-col {
+    padding: 0 20px;
+}
+
+.footer .footer-socials ul {
+    padding: 0;
+    margin-top: 40px;
+}
+
+.footer .footer-socials ul li {
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+}
+
+/* MODAL */
+
+.modal-body {
+    text-align: center;
+}
+
+.line {
+    border: 1px solid #124968;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.modal-body p {
+    margin: 0;
+}
+
+.modal-body .title {
+    color: #124968;
+    font-size: 30px;
+    font-weight: 700;
+    /* margin: 20px 0; */
+}
+
+.modal-body-content {
+    margin-bottom: 50px;
+}
+
+
+
+/* ABOUT US PAGE */
+.about-us {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.about-us h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.about-us span {
+    font-size: 20px;
+    color: #fff;
+    /* margin: 50px 0; */
+}
+
+
+
+.mission {
+    position: relative;
+    overflow: hidden;
+}
+
+.mission .mission-mission {
+    background: #D9A0A0;
+    padding: 50px 30px;
+}
+
+.mission .mission-vission {
+    background: #8CCCE4;
+    padding: 50px 30px;
+}
+
+.mission img {
+    position: absolute;
+    /* top: -100px; */
+    right: 0;
+    bottom: 0;
+    /* height: 655px; */
+}
+
+.mission .content {
+    width: 50%;
+}
+
+.mission .content h1 {
+    font-weight: bold;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.mission .content p {
+    font-size: 22px;
+}
+
+.statement-of-faith {
+    width: 70%;
+    margin: 150px auto;
+}
+
+.statement-of-faith h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 30px 0;
+}
+
+.statement-of-faith ul {
+    padding: 0;
+}
+
+.statement-of-faith ul li {
+    list-style: decimal;
+    margin: 30px 0;
+}
+
+.home-enrich-soul .display h2 {
+    color: #fff;
+    font-weight: 200;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+
+.programs {
+    overflow-x: scroll;
+    margin: 50px 0;
+}
+
+.programs h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+
+.programs .programs-content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+}
+
+.programs .programs-content .book {
+    border-radius: 20px;
+    flex-basis: 20%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 20px;
+    height: 200px;
+    position: relative;
+}
+
+.programs .programs-image {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    z-index: -10;
+}
+
+.programs .programs-content .book .book-content {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    position: sticky;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programs .programs-content h4 {
+    text-align: center;
+    font-weight: 200;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 20px;
+}
+
+
+.about-difference {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.about-difference h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.about-difference ul {
+    padding: 0;
+    margin: 30px 0;
+}
+
+.about-difference ul li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.about-difference button {
+    border: none;
+    background: #0C4363;
+    padding: 10px 50px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+.lead-pastors {
+    text-align: center;
+}
+
+.lead-pastors h1 {
+    margin: 50px 0;
+    margin-top: 200px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.lead-pastors .lead-pastors-content {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.lead-pastors .lead-pastors-content .pastor {
+    flex-basis: 20%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+}
+
+.lead-pastors-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.lead-pastors .lead-pastors-content .pastors-details {
+    text-align: center;
+}
+
+.lead-pastors .lead-pastors-content .pastors-details h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.lead-pastors .lead-pastors-content .pastors-details p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.lead-pastors .lead-pastors-content .pastor:hover img {
+    width: 250px;
+    height: 200px;
+}
+
+.gallery-line {
+    border: 2px solid #fff;
+    width: 80%;
+    margin: 80px auto;
+}
+
+.ongoing-projects {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.ongoing-projects img {
+    margin: 10px;
+    /* margin-right: 10px; */
+    width: 100%;
+}
+
+.gallery-JCPM h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.JCPM {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.JCPM-content {
+    border-radius: 20px;
+    flex-basis: 20%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 20px;
+}
+
+.JCPM-content img {
+    height: 300px;
+}
+
+.gallery-JCPM .support {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.gallery-JCPM button {
+    background: #fff;
+    color: #0A3148;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+.gallery-modal-body-content {
+    position: relative;
+}
+
+.gallery-modal-image {
+    position: absolute;
+    top: -120px;
+    left: 35%;
+    /* transform: translate(-50%, -50%); */
+}
+
+.gallery-modal-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.25));
+    top: -50px;
+}
+
+.gallery-modal-body-content h1 {
+    padding: 30px 0;
+    font-size: 30px;
+}
+
+.gallery-modal-support-content h2 {
+    color: #0F4767;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.gallery-modal-support-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.grow-deeper {
+    overflow: hidden;
+
+}
+
+.grow_deeper-image {
+    /* top: -350px; */
+    width: 100% !important;
+    height: 100%;
+    border-radius: 50%;
+    bottom: 0;
+    /* left: -150px; */
+}
+
+.grow-deeper-overlay {
+    /* border-radius: 50%;
+    top: -350px; */
+    width: 100% !important;
+    height: 100%;
+    border-radius: 50%;
+    bottom: 0;
+    /* left: -150px; */
+}
+
+.grow-deeper .hero-content {
+    width: 100%;
+    height: 100% !important;
+    margin: 0 auto;
+    position: sticky;
+    z-index: 10;
+    padding: 100px 0;
+}
+
+.grow-deeper h2 {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.title-space1 {
+    margin-top: 100px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/images/Rectangle\ 57.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.title-space2 {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/images/Rectangle\ 59.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.title-space3 {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/images/Rectangle\ 61.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.title-space4 {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/images/Rectangle\ 63.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+
+.space-title {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.space-title2 {
+    font-weight: 500;
+}
+
+.title-space-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.title-space-paper {
+    width: 40%;
+    position: relative;
+}
+
+.title-space-paper-content {
+    background: #fff;
+    height: 30vh;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.seek-support {
+    height: calc(100% - 40px);
+}
+
+.title-space-paper-content button {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    border: none;
+    background: #0F4767;
+    color: #fff;
+    padding: 5px 30px;
+    border-radius: 20px;
+}
+
+.email-a-pastor {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.email-a-pastor h1 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.email-a-pastor button {
+    background: #0F4767;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 40px;
+    border: none;
+}
+
+.email-a-pastor .email-content {
+    border: 1px solid #0F4767;
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-modal-body {
+    text-align: left !important;
+}
+
+.modal-form {
+    background: #0F4767;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.dia {
+    /* width: 80%!important; */
+    --bs-modal-zindex: 1055;
+    --bs-modal-width: 800px !important;
+}
+
+.modal-form button {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 30px;
+    border-radius: 10px;
+}
+
+.space-title-modal h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0F4767;
+}
+
+.space-title-modal button {
+    background: #0F4767;
+    color: #fff;
+    margin-top: 20px;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.desktop-hidden {
+    display: none;
+}
+
+.news-letter {
+    /* width: 90%; */
+    margin: 50px auto;
+}
+
+.news-letter .news-letter-item {
+    margin: 50px 0;
+    position: relative;
+}
+
+.news-letter .news-letter-item img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    display: grid;
+    align-items: center;
+    /* object-fit: cover; */
+}
+
+.news-letter .news-letter-item .content {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 40px 0;
+    color: #fff;
+}
+
+.news-letter .news-letter-item h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.news-letter .news-letter-item p {
+    margin: 40px 0;
+}
+
+.news-letter .news-letter-item hr {
+    border: 1px solid #145C85;
+}
+
+.news-letter .news-letter-item button {
+    border: none;
+    background: #0F4767;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+
+.news-letter .view-more {
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: #0F4767;
+    font-weight: bold;
+}
+
+
+.connect {
+    position: relative;
+}
+
+.connect img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    display: grid;
+    align-items: center;
+    /* object-fit: cover; */
+}
+
+.connect-content {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+}
+
+
+.connect-content p {
+    font-size: 32px;
+}
+
+.connect-content button {
+    border: none;
+    background: #0F4767;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+
+.subscribe {
+    background: #0A3148;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0;
+    margin-top: 100px;
+}
+
+.subscribe form {
+    margin-top: 20px;
+}
+
+.subscribe form .form-item {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.subscribe form .form-item input {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.subscribe form .form-item button {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 8px 30px;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.newsletter-a{
+    text-decoration: none;
+    color: #0F4767;
+}
+
+.owl-carousel.owl-drag .owl-item{
+    margin-right: 20px;
+}
+
+.owl-carousel .owl-item .lead-image{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+
+/* #customers-testimonials .owl-item.active {
+    border: 2px solid red;
+} */
+
