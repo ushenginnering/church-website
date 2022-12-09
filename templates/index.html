@@ -1,0 +1,208 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/mediaQueries.css' %}">
+    <title>Jesus Power Christian Ministries</title>
+{% endblock head %}
+
+
+{% block body %}
+
+    <div class="hero">
+        <div class="relative">
+            <div class='overlay'></div>
+            <img src="{% static 'assets/images/Rectangle 2 2.png' %}" class="heroBgImage d-md-none"  alt="">
+
+            <img src="{% static 'assets/images/Rectangle 2.png' %}" class="heroBgImage d-none d-md-block" alt="">
+            <div class="hero-content">
+                {% include 'navbar.html' %}
+
+                <div class="content-display">
+                    <div>
+                        <h1>Welcome to</h1>
+                        <p>JESUS POWER CHRISTIAN MINISTRIES </p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">Connect with us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white">
+        <div class="home-about c-container">
+            <div class="about-content">
+                <h1>About Us</h1>
+                <p>
+                    <span> Jesus Power Christian Ministries (JPCM) </span>
+                    is an interdenominational member of the body of
+                    Christ affiliated to the Evangelical Fellowship of
+                    Zimbabwe (EFZ). Like EFZ we believe in the whole
+                    Bible and the Power and Working of the Holy Spirit.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="{% static 'assets/images/Rectangle 9.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="c-container home-video row">
+        <div class="home-video-player col-lg-6 col-12">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ LatestVideo.video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+        <div class="home-video-content col-lg-6 col-12">
+            <h1>GET OUR LATEST MESAGES ONLINE</h1>
+            <div></div>
+            <p> Stay up to date with life changing messages from JPCM online.</p>
+        </div>
+    </div>
+
+    <div class="home-enrich-soul">
+        <img src="{% static 'assets/images/Rectangle 12.png' %}" alt="">
+        <div class="home-enrich-soul-content">
+            <div class="display">
+                <div>
+                    <h1>Enrich Your Soul</h1>
+                    <p>Subsribe to edifying newsletter from JPCM</p>
+                    <button><a href="{% url 'grow_deeper' %}" class="newsletter-a">CLICK TO READ</a> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="library" id="library">
+        <h1>Library</h1>
+        <div class="library-content scroll-hide owl-carousel">
+            {% for book in BookLIbrary %}
+                <div class="book item">
+                   <a href="media/{{ book.pdf }}" class="text-decoration-none" >
+                        <img src="{{ book.cover_page.url }}" class="library-image" alt="">
+                        <h4>{{ book.title }}</h4>
+                    </a>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div class="home-enrich-soul">
+        <img src="{% static 'assets/images/Rectangle 22.png' %}" alt="">
+        <div class="home-enrich-soul-content">
+            <div class="display">
+                <div>
+                    <h1>Upcoming Event</h1>
+                    <p>Get updated with the most recent events in JPCM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="home-form">
+        <div class="header">
+            <svg width="90" height="85" viewBox="0 0 106 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_231_364)">
+                    <path
+                        d="M36.4375 35.8594H69.5625C71.3927 35.8594 72.875 34.6707 72.875 33.2031V30.5469C72.875 29.0793 71.3927 27.8906 69.5625 27.8906H36.4375C34.6073 27.8906 33.125 29.0793 33.125 30.5469V33.2031C33.125 34.6707 34.6073 35.8594 36.4375 35.8594ZM33.125 49.1406C33.125 50.6082 34.6073 51.7969 36.4375 51.7969H69.5625C71.3927 51.7969 72.875 50.6082 72.875 49.1406V46.4844C72.875 45.0168 71.3927 43.8281 69.5625 43.8281H36.4375C34.6073 43.8281 33.125 45.0168 33.125 46.4844V49.1406ZM53 69.2501C49.6005 69.2501 46.2011 68.4101 43.2985 66.7283L0 41.6467V77.0313C0 81.4324 4.4491 85 9.9375 85H96.0625C101.551 85 106 81.4324 106 77.0313V41.6467L62.7015 66.7283C59.7989 68.4084 56.3995 69.2501 53 69.2501ZM102.193 27.0523C100.36 25.9001 98.6235 24.816 96.0625 23.2655V15.9375C96.0625 11.5364 91.6134 7.96877 86.125 7.96877H70.0697C69.4404 7.60354 68.8545 7.26155 68.1982 6.87971C64.718 4.8427 57.8031 -0.0580815 53 2.39385e-05C48.1969 -0.0580815 41.2841 4.8427 37.8018 6.87971C37.1455 7.26155 36.5597 7.60354 35.9303 7.96877H19.875C14.3866 7.96877 9.9375 11.5364 9.9375 15.9375V23.2655C7.37652 24.8144 5.63953 25.9001 3.8073 27.0523C2.62134 27.7976 1.66228 28.7494 1.00268 29.8357C0.343077 30.922 0.000204093 32.1144 0 33.3227L0 35.0907L19.875 46.6039V15.9375H86.125V46.6039L106 35.0907V33.3227C106 30.8756 104.596 28.563 102.193 27.0523Z"
+                        fill="black" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_231_364">
+                        <rect width="106" height="85" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <h1>Send your prayer request.</h1>
+        </div>
+
+        <div>
+            <form method="post", action="{% url 'home' %}">
+                {% csrf_token %}
+                <div class="row">
+
+                    {% for field in form %}
+
+                        {% if field == form.request %}
+                            <div class="form-input col-12">
+                                {{ field.label_tag }}
+                                {{ field }}
+                                {% if field.errors %}
+                                    {% for error in field.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ error }}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        {% else %}
+                            <div class="form-input col-md-6 col-12">
+                                {{ field.label_tag }}
+                                {{ field }}
+                                {% if field.errors %}
+                                    {% for error in field.errors %}
+                                        <div class="invalid-feedback">
+                                            {{ error }}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    
+                    {% endfor %}
+
+                </div>
+
+                <button>Send</button>
+            </form>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+            <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body-content">
+                <h class="title">Worship with us @</h>
+                <div class="line"></div>
+
+                <p>No. 138 Harare Street, 2nd Floor, Harare Zimbabwe</p>
+                <p>P.O. Box GD 803, Greendale Harare, Zimbabwe</p>
+            </div>
+
+            <div class="modal-body-content">
+                <h1 class="title">Join us Virtually</h1>
+                <div class="line"></div>
+
+                <a href="#">Youtube.yml.bom.nm</a>
+            </div>
+
+            <!-- <div class="modal-body-content">
+                <h1 class="title">Church account</h1>
+                <div class="line"></div>
+
+                <a href="#">Youtube.yml.bom.nm</a>
+            </div> -->
+
+        </div>
+        <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button> -->
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock body %}

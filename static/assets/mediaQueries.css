@@ -1,0 +1,293 @@
+@media (max-width: 900px) {
+
+    .navbar img {
+        width: 60px;
+        height: 55px;
+    }
+
+    .relative .heroBgImage {
+        /* object-fit: cover; */
+    }
+
+    .relative .hero-content .content-display h1 {
+        font-size: 50px;
+    }
+
+    .relative .hero-content .content-display p {
+        font-size: 25px;
+    }
+
+    .home-about {
+        display: block;
+    }
+
+    .home-about .about-content h1 {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+
+    .home-about img {
+        width: 100%;
+    }
+
+    .home-video {
+        display: block;
+        width: 90%;
+    }
+
+    .home-video .home-video-player {
+        border: 2px solid #fff;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .home-video .home-video-content h1 {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    .home-enrich-soul-content .display h1 {
+        font-size: 40px;
+    }
+
+    .home-enrich-soul-content .display p {
+        font-size: 16px;
+    }
+
+    .home-enrich-soul-content .display button {
+        padding: 5px 15px;
+    }
+
+    .home-enrich-soul-content .display {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .library h1 {
+        font-size: 40px;
+    }
+
+    .library .library-image {
+        height: 100px;
+    }
+
+    .home-form {
+        width: 90%;
+    }
+
+    .home-form form {
+        padding: 20px;
+    }
+
+    .home-form form .form-input {
+        margin: 10px 0;
+    }
+
+    .footer-content {
+        height: 100%;
+    }
+
+    .footer-content .display h3 {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+
+
+    /* about us page */
+    .mission img {
+        position: static;
+        width: 100%;
+    }
+
+    .mission .content {
+        width: 100%;
+    }
+
+    .mission .content h1 {
+        font-size: 30px;
+    }
+
+    .mission .content p {
+        font-size: 18px;
+    }
+
+    .statement-of-faith {
+        width: 80%;
+        margin: 80px auto;
+
+    }
+
+    .statement-of-faith h1 {
+        margin: 0;
+        font-size: 30px;
+    }
+
+    .statement-of-faith p {
+        font-size: 14px;
+    }
+
+    .home-enrich-soul .display h2 {
+        font-size: 30px;
+    }
+
+    .home-enrich-soul-content .display p {
+        font-size: 14px;
+    }
+
+    .about-difference h1 {
+        font-size: 25px;
+    }
+
+    /* Gallery  */
+
+    .lead-pastors .lead-pastors-content .pastor {
+        flex-basis: 50%
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+
+    .desktop-hidden {
+        display: block;
+    }
+
+    .mobile-g-view {
+        display: flex;
+    }
+
+    .mobile-g-view img {
+        width: 100%;
+    }
+
+    .subscribe {
+        width: 90%;
+    }
+
+    .subscribe form .form-item {
+        flex-direction: column;
+    }
+
+    .subscribe form .form-item input {
+        border: none;
+        padding: 5px 10px;
+        border-radius: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .subscribe form .form-item button {
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 5px 20px;
+        color: #fff;
+        width: 50%;
+        border-radius: 10px;
+        margin-left: 10px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .grow_deeper-image {
+        border-radius: 50%;
+        top: -350px;
+        width: 125% !important;
+        left: -100px;
+    }
+    
+    .grow-deeper-overlay {
+        border-radius: 50%;
+        top: -350px;
+        width: 125% !important;
+        left: -100px;
+    }
+
+
+}
+
+#hideDesktop{
+    display: none;
+}
+
+@media (max-width: 760px) {
+
+    .hideDesktop{
+        display: block;
+    }
+
+    .about-us {
+        width: 90%;
+    }
+
+    .about-us h2 {
+        font-size: 20px;
+    }
+
+    .about-us span {
+        font-size: 16px;
+    }
+
+    .programs .programs-content {
+        display: block;
+    }
+
+    .programs .programs-content .book {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .lead-pastors-content img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .lead-pastors .lead-pastors-content h4 {
+        font-size: 18px;
+    }
+
+    .lead-pastors .lead-pastors-content p {
+        font-size: 14px;
+    }
+
+    .gallery-line {
+        border: 1px solid #fff;
+    }
+
+    .gallery-JCPM h1 {
+        font-size: 30px;
+    }
+
+    .footer-content .display h3 {
+        text-align: center;
+    }
+
+    .footer-content .display p {
+        text-align: center;
+    }
+
+    .grow_deeper-image {
+        border-radius: 50%;
+        top: -350px;
+        width: 150% !important;
+        left: -100px;
+    }
+    
+    .grow-deeper-overlay {
+        border-radius: 50%;
+        top: -350px;
+        width: 150% !important;
+        left: -100px;
+    }
+    .news-letter{
+        margin-top: 20px;
+    }
+    .news-letter .news-letter-item{
+        margin-top: 20px!important;
+    }
+    .lead-pastors .lead-pastors-content .pastor:hover img {
+        width: 150px;
+        height: 150px;
+    }
+}

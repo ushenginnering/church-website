@@ -1,0 +1,169 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/mediaQueries.css' %}">
+    <title>Jesus Power Christian Ministries</title>
+{% endblock head %}
+
+{% block body %}
+
+    {% include 'navbar.html' %}
+
+
+
+    <div class="lead-pastors">
+        <h1>Lead Pastors</h1> 
+        <div class="lead-pastors-content scroll-hide owl-carousel" id="customers-testimonials">
+            {% for pastor in LeadPastors %}
+                <button class="pastor" type="button" class="btn btn-primary item" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop-{{pastor.id}}">
+                        <img src="{{ pastor.image.url }}" alt="" class="lead-image">
+                        <div class="pastor-details" style="color: #fff;">
+                            <h4 class="testimonial-name">{{ pastor.fullname }}</h4>
+                            <p>{{ pastor.title }}</p>
+                        </div>
+                </button>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div class="gallery-line"></div>
+
+
+    <div class="ongoing-projects row mobile-hidden">
+        <div class="col-lg-4 col-md-6 col-12">
+            <img src="{% static 'assets/images/gallery/Rectangle 42.png' %}" alt="">
+            <img src="{% static 'assets/images/gallery/Rectangle 43.png' %}" alt="">
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <img src="{% static 'assets/images/gallery/Rectangle 39.png' %}" alt="" style="height: 95%;">
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <img src="{% static 'assets/images/gallery/Rectangle 40.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="ongoing-projects row desktop-hidden">
+        <div class="col-lg-4 col-12">
+            <img src="{% static 'assets/images/gallery/Rectangle 39.png' %}" alt="">
+        </div>
+        <div class="col-lg-4 col-6 mobile-g-view">
+            <img src="{% static 'assets/images/gallery/Rectangle 42.png' %}" alt="">
+            <img src="{% static 'assets/images/gallery/Rectangle 43.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="gallery-line"></div>
+
+
+    <div class="gallery-JCPM">
+        <h1>JCPM Tafara</h1>
+
+        <div class="JCPM scroll-hide owl-carousel " style="margin-right: 0px;">
+            <div class="JCPM-content item "  >
+                <img src="{% static 'assets/images/gallery/Rectangle 46.png' %}" alt="">
+            </div>
+            <div class="JCPM-content item">
+                <img src="{% static 'assets/images/gallery/Rectangle 44.png' %}" alt="">
+            </div>
+            <div class="JCPM-content item">
+                <img src="{% static 'assets/images/gallery/Rectangle 45.png' %}" alt="">
+            </div>
+            <div class="JCPM-content item">
+                <img src="{% static 'assets/images/gallery/Rectangle 46.png' %}" alt="">
+            </div>
+            <div class="JCPM-content item">
+                <img src="{% static 'assets/images/gallery/Rectangle 46.png' %}" alt="">
+            </div>
+            <div class="JCPM-content item">
+                <img src="{% static 'assets/images/gallery/Rectangle 44.png' %}" alt="">
+            </div>
+        </div>
+
+        <div class="support">
+            <h1>Support our Projects</h1>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Click
+                to Donate</button>
+        </div>
+    </div>
+
+
+    {% include 'footer.html' %}
+
+    {% for pastor in LeadPastors %}
+    
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop-{{pastor.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 100000;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="gallery-modal-body-content">
+
+                        <div class="gallery-modal-image">
+                            <img src="{{ pastor.image.url }}" alt="">
+                        </div>
+
+
+                        <h1 class="title">{{ pastor.fullname }}</h1>
+
+                        <p>{{ pastor.description }}</p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button> -->
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    {% endfor %}
+
+    
+
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="gallery-modal-support-content">
+                        <h2>Support through Bank</h2>
+                        <p>Bank Details</p>
+
+
+                        <div>
+                            <h2>Support in person</h2>
+                            <p>No. 138 Harare Street, 2nd Floor Harare, Zimbabwe </p>
+                            <p> P.O. Box GD 803 Greendale Harare, Zimbabwe </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // change the color of the body        
+        document.querySelector('body').style.background = '#0C4363';
+    </script>
+
+{% endblock body %}

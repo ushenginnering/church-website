@@ -1,0 +1,220 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/mediaQueries.css' %}">
+    <title>Jesus Power Christian Ministries</title>
+{% endblock head %}
+
+
+{% block body %}
+
+    <div class="hero">
+        <div class="relative">
+            <div class='overlay'></div>
+
+            <img src="{% static 'assets/images/Rectangle 2 2.png' %}" class="heroBgImage d-md-none"  alt="">
+
+            <img src="{% static 'assets/images/Rectangle 2.png' %}" class="heroBgImage d-none d-md-block" alt="">
+
+
+
+
+            <div class="hero-content">
+                {% include 'navbar.html' %}
+                <div class="content-display">
+                    <div class="about-us">
+                        <h2>JESUS POWER CHRISTIAN MINISTRIES (JCPM) </h2>
+                        <span style="margin: 30px 0;"> Is an interdenominational member of the body of Christ affiliated
+                            to
+                            the Evangelical Fellowship of Zimbabwe (EFZ). Like EFZ we believe
+                            in the whole Bible and the Power and Working of the Holy Spirit.
+                        </span>
+
+                        <h2 style="margin-top: 100px;">OUR VALUES</h2>
+                        <span style="margin: 30px 0;">Faith, Truth, Love, Righteousness, Holiness, Sanctification and
+                            Fellowship of Believers.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mission">
+        <div class="mission-mission">
+            <div class="content">
+                <h1>Our Mission</h1>
+                <p>Is to glorify God through Jesus Christ by making Disciples of all
+                    Nations through the continued Ministry of Jesus Christ in Worship,
+                    Evangelism, Discipleship, Deliverance, Fellowship and Mercy,
+                    Support and care for each other as God’s family and encouraging
+                    personal Christian growth. (Jeremiah 1:10, Ephesians 4:11-16 and
+                    Luke 4:18-19).
+                </p>
+            </div>
+        </div>
+
+        <div class="mission-vission">
+            <div class="content">
+                <h1>Our Vission</h1>
+                <p>To raise prayerful men and women who will reign over the
+                    nations and kingdoms, uprooting, pulling down, demolishing
+                    and overthrowing the works of darkness in order to establish
+                    the Kingdom of God thus fulfilling God’s will for His people.
+                </p>
+            </div>
+        </div>
+
+        <img src="{% static 'assets/images/PASTOR ON TRUMPET 1.png' %}" alt="">
+    </div>
+
+
+    <div class="statement-of-faith">
+        <h1>Statement of Faith</h1>
+        <ul>
+            <li>
+                We believe in the whole Bible and God’s plan to reconcile men to Himself through Jesus Christ
+                and according to the Foundation and the teachings of Jesus Christ. We believe that the Bible is
+                the inspired and infallible Word of God and that it is the answer to every human question or
+                challenge you can ever think of. (2 Timothy 3:16 and 2 Peter 1:20-21).
+            </li>
+            <li>
+                We believe in the one and true God in the three Persons i.e. God the Father, the Son and the
+                Holy Spirit who is Omnipresent, Omniscient, and Omnipotent. (Ephesians 4:5-6, Matthew 3:16-17,
+                1 Corinthians 8:6 and Genesis 1:26, Revelations 19:6, Psalm 139:8-10, 1 John 5:6-7)
+            </li>
+            <li>
+                We believe in the Deity of Jesus Christ and that Jesus Christ was conceived of the Holy Spirit
+                and born of a virgin. We also believe that Jesus died and rose from the dead in bodily form
+                after three days, and that Jesus Christ ascended to heaven and that He is coming back a
+                second time in the “Rapture” of the Church to judge the whole world.
+                (John 1:1-4, Hebrews 1:1-5, Luke 1:30-35, Matthew 24:29-30, Acts 1:9-10, John 19:30-35,
+                Luke 24:36-40, 1 Thessalonians 4:16-17.)
+            </li>
+            <li>
+                We believe that the only means of being cleansed from sin is repentance and faith in the
+                precious Blood of Jesus. (Acts 3:19, Luke 24:47, Ephesians 1:7, 1 John 1:7-9)
+            </li>
+            <li>
+                We believe that Jesus Christ came to this world to set captives free, and in the five-fold
+                Ministries given to some by Jesus Christ. (Luke 4:18-19, Ephesians 4:11).
+            </li>
+            <li>
+                We believe that regeneration by the Holy Spirit is essential for personal salvation through
+                Jesus Christ. (Titus 3:5, John 3:3-5.).
+            </li>
+            <li>
+                We believe that Jesus Christ is the mediator between God and man, and that the finished
+                work on the cross provides divine healing for the body and salvation of the soul for everyone
+                that believes. (1 Peter 2:24, 1 Timothy 2:4-5, Acts 3:16 and Acts 9:32-35).
+            </li>
+            <li>
+                We believe that quality service to God does not come by might or power but by the
+                Holy Spirit. We believe that when an individual receives the Holy Spirit, he/she receives the
+                divine enablement for Christian service and witness. (Acts 1:8, Acts 2:4, Acts 3:1-26 and Acts 4:5-12).
+            </li>
+            <li>
+                We believe in the final resurrection and judgment of both the saved and the unsaved, both
+                the dead and the living. We also believe in eternal life for the saved and eternal judgment for
+                the unsaved. (Revelation 20:11-15, 1 Corinthians 15:12-23).
+            </li>
+            <li>
+                We believe that Christ is the head of the Church and that the Church should make known
+                to the world the finished work of Christ Jesus and the power in that Name. (Colossians 1:17-18,
+                Ephesians 3:10, Philippians 2:9-11, Romans 15:16).
+            </li>
+        </ul>
+    </div>
+
+    <div class="home-enrich-soul">
+        <img src="{% static 'assets/images/Rectangle 22.png' %}" alt="">
+        <div class="home-enrich-soul-content">
+            <div class="display special_calling">
+                <div>
+                    <h2>SPECIFIC CALLING</h2>
+                    <p>Though JPCM has the general mission as all other members of the body of Christ to reach the lost
+                        with the
+                        Gospel of Christ; it has a specific calling into deliverance ministry guided by Jeremiah 1:10.
+                        Certain long- standing
+                        problems in life such as poverty (both spiritual and physical) generational problems, can only
+                        be addressed
+                        through deliverance which can go to the root source of the problem and arrest it once and for
+                        all. After
+                        deliverance it is critical for a person to remain free through enhanced spiritual growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="programs">
+        <h1>Our Programs</h1>
+        <div class="programs-content scroll-hide owl-carousel">
+            <div class="book item">
+                <img src="{% static 'assets/images/USH AFFILIATE/Rectangle 34.png' %}" class="programs-image" alt="">
+                <div class="book-content">
+                    <div>
+                        <h4>Sunday Worship</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book item">
+                <img src="{% static 'assets/images/USH AFFILIATE/Rectangle 35.png' %}" class="programs-image" alt="">
+                <div class="book-content">
+                    <div>
+                        <h4>Edifying Bible Studies </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book item">
+                <img src="{% static 'assets/images/USH AFFILIATE/Rectangle 36.png' %}" class="programs-image" alt="">
+                <div class="book-content">
+                    <div>
+                        <h4>Home Cells</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book item">
+                <img src="{% static 'assets/images/USH AFFILIATE/Rectangle 37.png' %}" class="programs-image" alt="">
+                <div class="book-content">
+                    <div>
+                        <h4>Evangelism And Care</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book item">
+                <img src="{% static 'assets/images/USH AFFILIATE/Rectangle 34.png' %}" class="programs-image" alt="">
+                <div class="book-content">
+                    <div>
+                        <h4>Another Event</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-difference">
+        <h1>YOU CAN MAKE A DIFFERENCE THROUGH:</h1>
+
+        <ul>
+            <li>-Financial donations or Land, Bibles </li>
+            <li>- Donations of materials such as groceries, food, clothing, blankets, toys and Christian literature</li>
+            <li>- Donations of Musical and Office Equipment </li>
+            <li>- Donations of Vehicles </li>
+            <li>- Offering your time and technical expertise </li>
+        </ul>
+
+        <button>Donate</button>
+    </div>
+
+    {% include 'footer.html' %}
+
+
+{% endblock body %}

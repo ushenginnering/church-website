@@ -1,0 +1,235 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/mediaQueries.css' %}">
+    <title>Jesus Power Christian Ministries</title>
+{% endblock head %}
+
+{% block body %}
+    <div class="hero">
+        <div class="relative grow-deeper">
+            <div class='overlay grow-deeper-overlay'></div>
+            <img src="{% static 'assets/images/Rectangle 2.png' %}" class="heroBgImage grow_deeper-image" alt="">
+            <div class="hero-content">
+                {% include 'navbar.html' %}
+                <div class="content-display">
+                    <div>
+                        <h2>News Letter</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="title-space1">
+        <div class="title-space-content">
+            <h1 class="space-title">Title Space</h1>
+
+            <div class="title-space-paper">
+                <div class="title-space-paper-content">
+                    <h3 class="space-title2">Title</h3>
+                    <hr>
+                    <div style="height: 55%; overflow: scroll;">
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae natus sint id dignissimos illo doloribus fugit sequi officiis saepe! Saepe, corrupti! Dignissimos minima impedit quod placeat molestiae nihil cumque enim?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae natus sint id dignissimos illo doloribus fugit sequi officiis saepe! Saepe, corrupti! Dignissimos minima impedit quod placeat molestiae nihil cumque enim?</p>
+                    </div>
+
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#space-title">Seek Support</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title-space2">
+        <div class="title-space-content">
+            <h1 class="space-title">Title Space</h1>
+
+            <div class="title-space-paper">
+                <div class="title-space-paper-content">
+                    <h3 class="space-title2">Title</h3>
+                    <hr>
+                    <div style="height: 55%; overflow: scroll;">
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae natus sint id dignissimos illo doloribus fugit sequi officiis saepe! Saepe, corrupti! Dignissimos minima impedit quod placeat molestiae nihil cumque enim?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae natus sint id dignissimos illo doloribus fugit sequi officiis saepe! Saepe, corrupti! Dignissimos minima impedit quod placeat molestiae nihil cumque enim?</p>
+                    </div>
+
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#space-title">Seek Support</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title-space3">
+        <div class="title-space-content">
+            <h1 class="space-title">Title Space</h1>
+
+            <div class="title-space-paper">
+                <div class="title-space-paper-content">
+                    <h3 class="space-title2">Title</h3>
+                    <hr>
+                    <div style="height: 55%; overflow: scroll;">
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae natus sint id dignissimos illo doloribus fugit sequi officiis saepe! Saepe, corrupti! Dignissimos minima impedit quod placeat molestiae nihil cumque enim?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae natus sint id dignissimos illo doloribus fugit sequi officiis saepe! Saepe, corrupti! Dignissimos minima impedit quod placeat molestiae nihil cumque enim?</p>
+                    </div>
+
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#space-title">Seek Support</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title-space4">
+        <div class="title-space-content">
+            <h1 class="space-title">Title Space</h1>
+
+            <div class="title-space-paper">
+                <div class="title-space-paper-content">
+                    <h3 class="space-title2">Title</h3>
+                    <hr>
+                    <div style="height: 55%; overflow: scroll;">
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae natus sint id dignissimos illo doloribus fugit sequi officiis saepe! Saepe, corrupti! Dignissimos minima impedit quod placeat molestiae nihil cumque enim?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae natus sint id dignissimos illo doloribus fugit sequi officiis saepe! Saepe, corrupti! Dignissimos minima impedit quod placeat molestiae nihil cumque enim?</p>
+                    </div>
+
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#space-title">Seek Support</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="news-letter">
+            <div class="news-letter-item">
+                <!-- <img src="" alt=""> -->
+                <div class="content" style="color: black;">
+                    <h1>{{ newsletter.subject }}</h1>
+                    <hr>
+                    <p>{{ newsletter.body }} </p>
+                    <hr>
+                    {% comment %} <button>More from this post</button> {% endcomment %}
+                </div>
+            </div>        
+
+        <p class="view-more"><a href="{% url 'grow_deeper' %}?next_index={{next_index}}" class="text-decoration-none">view Previous</a></p>
+    </div>
+
+
+    <div class="connect">
+        <img src="{% static 'assets/images/Rectangle 63.png' %}" alt="">
+        <div class="connect-content">
+            <p>Click here to E-mail a pastor</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">Connect</button>
+        </div>
+    </div>
+
+    <div class="subscribe">
+        <form action="{% url 'grow_deeper' %}" method="post">
+            {% csrf_token %}
+            <h3>Subscribe to our newsletter</h3>
+            <div class="form-item">
+                {{ form.email }}
+                <button type="submit">SEND</button>
+            </div>
+        </form>
+    </div>
+
+    {% include 'footer.html' %}
+
+
+    <!-- Modal -->
+    <div class="modal dia fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body form-modal-body">
+                    <form action="" class="modal-form">
+                        <div class="row">
+                            <div class=" col-6" style="margin: 10px 0;">
+                                <label for="">First name *</label>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                            <div class="col-6" style="margin: 10px 0;">
+                                <label for="">Last name *</label>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                            <div class="col-6" style="margin: 10px 0;">
+                                <label for="">Email *</label>
+                                <input type="email" style="width: 100%;">
+                            </div>
+                            <div class="col-6" style="margin: 10px 0;">
+                                <label for="">Phone *</label>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                            <div class="col-12" style="margin: 10px 0;">
+                                <label for="">Prayer request *</label>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </div>
+
+                        <button>Send</button>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- space title modal -->
+    <div class="modal fade" id="space-title" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body form-modal-body">
+                    <div class="gallery-modal-support-content space-title-modal">
+                        <form action="">
+                            <div class="">
+                                <h3>Title</h3>
+                                <hr>
+                                <textarea name="" id="" cols="30" rows="5" placeholder="lorem ipsum agitus hslke" style="width: 100%;"></textarea>
+                            </div>
+
+                            <div class="mt-5">
+                                <h3>Another Subheading</h3>
+                                <hr>
+                                <textarea name="" id="" cols="30" rows="5" placeholder="lorem ipsum agitus hslke" style="width: 100%;"></textarea>
+                            </div>
+
+                            <button>Seek Support</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
