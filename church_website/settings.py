@@ -23,7 +23,7 @@ load_dotenv(os.path.join(project_folder, '.env'))
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'a8il450%mg$&ubsf5ba+c&%!+^0ut1955n55(s0nbxn^xllp7g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -163,12 +163,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = 'ushengineering@gmail.com'
+EMAIL_HOST_PASSWORD = 'lcgjoplrnllidaax'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+GOOGLE_API_KEY = 'AIzaSyC05foL7qsrJE1ORGMlAAGrNmwxRasxXaE'
