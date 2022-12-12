@@ -23,7 +23,9 @@
                         <img src="{{ pastor.image.url }}" alt="" class="lead-image">
                         <div class="pastor-details" style="color: #fff;">
                             <h4 class="testimonial-name">{{ pastor.fullname }}</h4>
-                            <p>{{ pastor.title }}</p>
+                            {% if pastor.title %}
+                                <p>{{ pastor.title }}</p>
+                            {% endif %}
                         </div>
                 </button>
             {% endfor %}
