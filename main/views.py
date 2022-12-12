@@ -8,27 +8,30 @@ from django.core.mail import send_mail
 
 # Create your views here.
 class home(View):
-    context = {
-        'LatestVideo': VideoMessage.objects.first(),
-        'BookLIbrary': BookLibrary.objects.all(),
-    }
 
     def get(self, request):
-        self.context['form'] = PrayerRequestForm()
+        context = {
+            'LatestVideo': VideoMessage.objects.first(),
+            'BookLIbrary': BookLibrary.objects.all(),
+            'form': PrayerRequestForm(),
+        }
     
-        return render(request, 'index.html', self.context)
+        return render(request, 'index.html', context)
 
     def post(self, request):
+        context = {
+            'LatestVideo': VideoMessage.objects.first(),
+            'BookLIbrary': BookLibrary.objects.all(),
+        }
         form = PrayerRequestForm(request.POST)
-        print(' it got here')
         if form.is_valid():
             form.save()
             messages.success(request, 'prayer request saved')
             
             return redirect('home')
 
-        self.context['form'] = form
-        return render(request, 'index.html', self.context)
+        context['form'] = form
+        return render(request, 'index.html', context)
             
 
 def about(request):
