@@ -14,7 +14,7 @@ def validate_file(value):
 
 class LeadPastors(models.Model):
     fullname = models.CharField(max_length=30)
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, null=True, empty=True)
     description = models.TextField()
     image = models.ImageField(upload_to='LeadPastors')
 
