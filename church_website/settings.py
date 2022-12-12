@@ -1,9 +1,6 @@
 from pathlib import Path
 import os
 
-from dotenv import load_dotenv
-load_dotenv()  # loads the configs from .env
-
 #changing django default tag
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
@@ -13,6 +10,13 @@ MESSAGE_TAGS = {
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+
+from dotenv import load_dotenv
+load_dotenv()  # loads the configs from .env
+project_folder = os.path.expanduser(os.path.join(BASE_DIR, 'church-website'))  # adjust as appropriate
+load_dotenv(os.path.join(project_folder, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
