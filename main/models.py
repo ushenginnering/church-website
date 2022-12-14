@@ -76,3 +76,15 @@ class PrayerRequest(models.Model):
     phone = PhoneNumberField()
     request = models.CharField(verbose_name='Prayer Request', max_length=2000)
     
+    def __str__(self) -> str:
+        return self.firstname + " " + self.lastname
+
+class AdminTutorial(models.Model):
+    title = models.CharField(max_length=200)
+    video = models.FileField(upload_to='VideoTutorials')
+
+    def __str__(self):
+        return self.title
+    
+
+    
