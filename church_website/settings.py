@@ -26,7 +26,7 @@ load_dotenv(os.path.join(project_folder, '.env'))
 SECRET_KEY = 'a8il450%mg$&ubsf5ba+c&%!+^0ut1955n55(s0nbxn^xllp7g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
