@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'phonenumber_field',
     'django.contrib.sites',
+    'admin_extra_buttons',
     'cms',
     'menus',
     'treebeard',

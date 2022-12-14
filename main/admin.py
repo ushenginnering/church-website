@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import LeadPastors, BookLibrary, VideoMessage, NewsLetter, NewsLetterUsers, PrayerRequest, AdminTutorial
+from . import admin_buttons
 
 class VideoMessageAdmin(admin.ModelAdmin):
     fields = ('url',)
@@ -15,9 +16,9 @@ admin.site.register(AdminTutorial)
 
 
 from django.contrib.sites.models import Site
-from cms.models import Page, PageType, StaticPlaceholder
+# from cms.models import Page, PageType, StaticPlaceholder
 
-admin.site.unregister(Site)
-admin.site.unregister(Page)
-admin.site.unregister(PageType)
-admin.site.unregister(StaticPlaceholder)
+# admin.site.unregister(Site)
+# admin.site.unregister(Page)
+# admin.site.unregister(PageType)
+# admin.site.unregister(StaticPlaceholder)
