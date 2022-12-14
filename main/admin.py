@@ -16,9 +16,9 @@ admin.site.register(AdminTutorial)
 
 
 from django.contrib.sites.models import Site
-# from cms.models import Page, PageType, StaticPlaceholder
+from cms.models import Page, PageType, StaticPlaceholder
 
-# admin.site.unregister(Site)
-# admin.site.unregister(Page)
-# admin.site.unregister(PageType)
-# admin.site.unregister(StaticPlaceholder)
+admin.site.unregister(Site)
+admin.site.unregister(Page)
+admin.site.unregister(PageType)
+admin.site.unregister(StaticPlaceholder)

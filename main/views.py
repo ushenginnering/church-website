@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import VideoMessage, BookLibrary, LeadPastors, NewsLetterUsers, NewsLetter
+from .models import VideoMessage, BookLibrary, LeadPastors, NewsLetterUsers, NewsLetter, AdminTutorial
 from .forms import PrayerRequestForm, NewsLetterUsersForm
 
 from django.views import View
@@ -75,3 +75,13 @@ class grow_deeper(View):
         user.save()
         messages.success(request, "successfully subscribed to news letter")
         return redirect('grow_deeper')
+
+
+def admin_tutorials(request):
+    if not request.user.is_superuser:
+        messages.info(request, 'You dont have permission to access the page')
+        return redirect('home')
+    context = {
+        'AdminTutorials': AdminTutorial.objects.all(),
+    }
+    return render(request, 'admin_tutorials.html', context)
