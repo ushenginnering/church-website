@@ -77,9 +77,9 @@
     <div class="library" id="library">
         <h1>Library</h1>
         <div class="library-content scroll-hide owl-carousel">
-            {% for book in BookLIbrary %}
+            {% for book in BookLibrary %}
                 <div class="book item">
-                   <a href="media/{{ book.pdf }}" class="text-decoration-none" >
+                    <a href="{% if book.pdf %} media/{{ book.pdf }} {% else %} # {% endif %}" class="text-decoration-none" >
                         <img src="{{ book.cover_page.url }}" class="library-image" alt="">
                         <h4>{{ book.title }}</h4>
                     </a>

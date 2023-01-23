@@ -10,12 +10,12 @@ from django.core.mail import send_mail
 class home(View):
     context = {
         'LatestVideo': VideoMessage.objects.first(),
-        'BookLIbrary': BookLibrary.objects.all(),
+        'BookLibrary': BookLibrary.objects.all(),
     }
 
     def get(self, request):
         self.context['form'] = PrayerRequestForm()
-    
+
         return render(request, 'index.html', self.context)
 
     def post(self, request):

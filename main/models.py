@@ -27,7 +27,7 @@ class BookLibrary(models.Model):
     author = models.CharField(max_length=50)
     short_description = models.TextField(null=True, blank=True)
     cover_page = models.ImageField(upload_to='BookLibrary/CoverPage')
-    pdf = models.FileField(upload_to='BookLIbrary/PDf', max_length=100, validators=[validate_file])
+    pdf = models.FileField(upload_to='BookLIbrary/PDf', max_length=100, validators=[validate_file], null=True, blank=True)
 
     
     def __str__(self) -> str:
