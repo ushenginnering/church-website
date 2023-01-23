@@ -15,13 +15,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 from dotenv import load_dotenv
 load_dotenv()  # loads the configs from .env
+project_folder = os.path.expanduser(os.path.join(BASE_DIR, 'church-website'))  # adjust as appropriate
+load_dotenv(os.path.join(project_folder, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'a8il450%mg$&ubsf5ba+c&%!+^0ut1955n55(s0nbxn^xllp7g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
