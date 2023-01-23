@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import VideoMessage, BookLibrary, LeadPastors, NewsLetterUsers, NewsLetter
+from .models import VideoMessage, BookLibrary, LeadPastors, NewsLetterUsers, NewsLetter, AdminTutorial
 from .forms import PrayerRequestForm, NewsLetterUsersForm
 
 from django.views import View
@@ -9,18 +9,16 @@ from django.core.mail import send_mail
 # Create your views here.
 class home(View):
     context = {
-        'LatestVideo': VideoMessage.objects.first(),
-        'BookLibrary': BookLibrary.objects.all(),
-    }
+            'LatestVideo': VideoMessage.objects.first(),
+            'BookLibrary': BookLibrary.objects.all(),
+            'form': PrayerRequestForm,
+        }
 
     def get(self, request):
-        self.context['form'] = PrayerRequestForm()
-
         return render(request, 'index.html', self.context)
 
     def post(self, request):
         form = PrayerRequestForm(request.POST)
-        print(' it got here')
         if form.is_valid():
             form.save()
             messages.success(request, 'prayer request saved')
@@ -72,3 +70,13 @@ class grow_deeper(View):
         user.save()
         messages.success(request, "successfully subscribed to news letter")
         return redirect('grow_deeper')
+
+
+def admin_tutorials(request):
+    if not request.user.is_superuser:
+        messages.info(request, 'You dont have permission to access the page')
+        return redirect('home')
+    context = {
+        'AdminTutorials': AdminTutorial.objects.all(),
+    }
+    return render(request, 'admin_tutorials.html', context)
