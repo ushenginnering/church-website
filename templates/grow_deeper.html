@@ -109,8 +109,8 @@
         </div>
     </div> -->
 
-
-    <div class="news-letter">
+    {% if newsletter %}
+        <div class="news-letter">
             <div class="news-letter-item">
                 <!-- <img src="" alt=""> -->
                 <div class="content" style="color: black;">
@@ -122,8 +122,9 @@
                 </div>
             </div>        
 
-        <p class="view-more"><a href="{% url 'grow_deeper' %}?next_index={{next_index}}" class="text-decoration-none">view Previous</a></p>
-    </div>
+            <p class="view-more"><a href="{% url 'grow_deeper' %}?next_index={{next_index}}" class="text-decoration-none">view Previous</a></p>
+        </div>
+    {% endif %}
 
 
     <div class="connect">

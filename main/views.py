@@ -51,10 +51,15 @@ class grow_deeper(View):
             news_letter_index = 0
         else:
             news_letter_index = int(news_letter_index) if len(NewsLetter.objects.all()) > int(news_letter_index) else 0
+        
+        if NewsLetter.objects.count() == 0:
+            newsletter = None
+        else:
+            newsletter = NewsLetter.objects.all()[news_letter_index]
 
         context = {
             'form': self.form,
-            'newsletter': NewsLetter.objects.all()[news_letter_index],
+            'newsletter': newsletter,
             'next_index': news_letter_index + 1,
         }
         
